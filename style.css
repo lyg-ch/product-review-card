@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  padding: 1rem;
+}
+.product {
+  background-color: #fff;
+  max-width: 700px;
+  height: 500px;
+  display: flex;
+  border-radius: 10px;
+}
+.product-image {
+  border-radius: 10px 0 0 10px;
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 2/1;
+}
+.product-detail {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.product-sub {
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+.product-title {
+  color: hsl(212, 21%, 14%);
+  font-size: 38px;
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+  text-align: left;
+  line-height: 2.5rem;
+}
+.product-description {
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5rem;
+}
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.price-discount {
+  color: hsl(158, 36%, 37%);
+  font-size: 32px;
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+}
+.price-origin {
+  text-decoration: line-through;
+  font-size: 16px;
+}
+button {
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 0rem;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: hsl(159, 33%, 52%);
+}
+.attribution {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  .product {
+    flex-direction: column;
+    height: 95vh;
+  }
+  .product-title {
+    font-size: 36px;
+  }
+  .product-detail {
+    gap: 1.5rem;
+    flex-grow: 1;
+  }
+  .product-image {
+    height: 50%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+}
